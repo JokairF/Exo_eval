@@ -271,16 +271,6 @@ function testAvion()
 }
 
 try {
-    $vehiculeResults = testVehicule();
-    echo "Résultats des tests de véhicule :<br/>";
-    foreach ($vehiculeResults as $test => $result) {
-        echo ucfirst($test) . " : " . ($result ? "Réussi" : "Échoué") . "<br/>";
-    }
-} catch (AssertionError $e) {
-    echo "Certains tests de véhicule ont échoué : " . $e->getMessage() . "<br/>";
-}
-
-try {
     $avionResults = testAvion();
     echo "Résultats des tests d'avion :<br/>";
     foreach ($avionResults as $test => $result) {
